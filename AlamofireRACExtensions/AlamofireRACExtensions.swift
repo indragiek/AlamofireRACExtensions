@@ -37,7 +37,7 @@ public extension Manager {
     }
     
     public func rac_dataWithRequest(request: URLRequestConvertible) -> SignalProducer<(NSData, NSHTTPURLResponse), NSError> {
-        return rac_request(request, serializer: Alamofire.Request.responseDataSerializer()).lift(map { (object, response) in
+        return rac_request(request, serializer: Request.responseDataSerializer()).lift(map { (object, response) in
             if let data = object as? NSData {
                 return (data, response)
             } else {
@@ -47,10 +47,10 @@ public extension Manager {
     }
     
     public func rac_JSONWithRequest(request: URLRequestConvertible, options: NSJSONReadingOptions = .allZeros) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError> {
-        return rac_request(request, serializer: Alamofire.Request.JSONResponseSerializer(options: options))
+        return rac_request(request, serializer: Request.JSONResponseSerializer(options: options))
     }
     
     public func rac_propertyListWithRequest(request: URLRequestConvertible, options: NSPropertyListReadOptions = .allZeros) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError> {
-        return rac_request(request, serializer: Alamofire.Request.propertyListResponseSerializer(options: options))
+        return rac_request(request, serializer: Request.propertyListResponseSerializer(options: options))
     }
 }
