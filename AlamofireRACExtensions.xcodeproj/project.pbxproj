@@ -10,6 +10,8 @@
 		7233CA4A1A9EB38F00957052 /* AlamofireRACExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7233CA491A9EB38F00957052 /* AlamofireRACExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7233CA501A9EB38F00957052 /* AlamofireRACExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7233CA441A9EB38F00957052 /* AlamofireRACExtensions.framework */; };
 		7233CA571A9EB38F00957052 /* AlamofireRACExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233CA561A9EB38F00957052 /* AlamofireRACExtensionsTests.swift */; };
+		729891551A9F7C24008E6A70 /* AlamofireRACExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7298914A1A9F7C24008E6A70 /* AlamofireRACExtensions.framework */; };
+		729891631A9F7C71008E6A70 /* AlamofireRACExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7233CA561A9EB38F00957052 /* AlamofireRACExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +22,13 @@
 			remoteGlobalIDString = 7233CA431A9EB38F00957052;
 			remoteInfo = AlamofireRACExtensions;
 		};
+		729891561A9F7C24008E6A70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7233CA3B1A9EB38F00957052 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 729891491A9F7C24008E6A70;
+			remoteInfo = "AlamofireRACExtensions-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +38,8 @@
 		7233CA4F1A9EB38F00957052 /* AlamofireRACExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlamofireRACExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7233CA551A9EB38F00957052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7233CA561A9EB38F00957052 /* AlamofireRACExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRACExtensionsTests.swift; sourceTree = "<group>"; };
+		7298914A1A9F7C24008E6A70 /* AlamofireRACExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireRACExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		729891541A9F7C24008E6A70 /* AlamofireRACExtensions-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AlamofireRACExtensions-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +55,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				7233CA501A9EB38F00957052 /* AlamofireRACExtensions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		729891461A9F7C24008E6A70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		729891511A9F7C24008E6A70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				729891551A9F7C24008E6A70 /* AlamofireRACExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +90,8 @@
 			children = (
 				7233CA441A9EB38F00957052 /* AlamofireRACExtensions.framework */,
 				7233CA4F1A9EB38F00957052 /* AlamofireRACExtensionsTests.xctest */,
+				7298914A1A9F7C24008E6A70 /* AlamofireRACExtensions.framework */,
+				729891541A9F7C24008E6A70 /* AlamofireRACExtensions-iOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				7233CA561A9EB38F00957052 /* AlamofireRACExtensionsTests.swift */,
+				729891421A9F7A05008E6A70 /* Frameworks */,
 				7233CA541A9EB38F00957052 /* Supporting Files */,
 			);
 			path = AlamofireRACExtensionsTests;
@@ -102,6 +131,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		729891421A9F7A05008E6A70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -113,12 +149,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		729891471A9F7C24008E6A70 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7233CA431A9EB38F00957052 /* AlamofireRACExtensions */ = {
+		7233CA431A9EB38F00957052 /* AlamofireRACExtensions-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7233CA5A1A9EB38F00957052 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensions" */;
+			buildConfigurationList = 7233CA5A1A9EB38F00957052 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensions-Mac" */;
 			buildPhases = (
 				7233CA3F1A9EB38F00957052 /* Sources */,
 				7233CA401A9EB38F00957052 /* Frameworks */,
@@ -129,14 +172,14 @@
 			);
 			dependencies = (
 			);
-			name = AlamofireRACExtensions;
+			name = "AlamofireRACExtensions-Mac";
 			productName = AlamofireRACExtensions;
 			productReference = 7233CA441A9EB38F00957052 /* AlamofireRACExtensions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7233CA4E1A9EB38F00957052 /* AlamofireRACExtensionsTests */ = {
+		7233CA4E1A9EB38F00957052 /* AlamofireRACExtensionsTests-Mac */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7233CA5D1A9EB38F00957052 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensionsTests" */;
+			buildConfigurationList = 7233CA5D1A9EB38F00957052 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensionsTests-Mac" */;
 			buildPhases = (
 				7233CA4B1A9EB38F00957052 /* Sources */,
 				7233CA4C1A9EB38F00957052 /* Frameworks */,
@@ -147,9 +190,45 @@
 			dependencies = (
 				7233CA521A9EB38F00957052 /* PBXTargetDependency */,
 			);
-			name = AlamofireRACExtensionsTests;
+			name = "AlamofireRACExtensionsTests-Mac";
 			productName = AlamofireRACExtensionsTests;
 			productReference = 7233CA4F1A9EB38F00957052 /* AlamofireRACExtensionsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		729891491A9F7C24008E6A70 /* AlamofireRACExtensions-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7298915D1A9F7C24008E6A70 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensions-iOS" */;
+			buildPhases = (
+				729891451A9F7C24008E6A70 /* Sources */,
+				729891461A9F7C24008E6A70 /* Frameworks */,
+				729891471A9F7C24008E6A70 /* Headers */,
+				729891481A9F7C24008E6A70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AlamofireRACExtensions-iOS";
+			productName = "AlamofireRACExtensions-iOS";
+			productReference = 7298914A1A9F7C24008E6A70 /* AlamofireRACExtensions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		729891531A9F7C24008E6A70 /* AlamofireRACExtensions-iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 729891601A9F7C24008E6A70 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensions-iOSTests" */;
+			buildPhases = (
+				729891501A9F7C24008E6A70 /* Sources */,
+				729891511A9F7C24008E6A70 /* Frameworks */,
+				729891521A9F7C24008E6A70 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				729891571A9F7C24008E6A70 /* PBXTargetDependency */,
+			);
+			name = "AlamofireRACExtensions-iOSTests";
+			productName = "AlamofireRACExtensions-iOSTests";
+			productReference = 729891541A9F7C24008E6A70 /* AlamofireRACExtensions-iOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -167,6 +246,12 @@
 					7233CA4E1A9EB38F00957052 = {
 						CreatedOnToolsVersion = 6.3;
 					};
+					729891491A9F7C24008E6A70 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					729891531A9F7C24008E6A70 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 7233CA3E1A9EB38F00957052 /* Build configuration list for PBXProject "AlamofireRACExtensions" */;
@@ -181,8 +266,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7233CA431A9EB38F00957052 /* AlamofireRACExtensions */,
-				7233CA4E1A9EB38F00957052 /* AlamofireRACExtensionsTests */,
+				7233CA431A9EB38F00957052 /* AlamofireRACExtensions-Mac */,
+				7233CA4E1A9EB38F00957052 /* AlamofireRACExtensionsTests-Mac */,
+				729891491A9F7C24008E6A70 /* AlamofireRACExtensions-iOS */,
+				729891531A9F7C24008E6A70 /* AlamofireRACExtensions-iOSTests */,
 			);
 		};
 /* End PBXProject section */
@@ -196,6 +283,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7233CA4D1A9EB38F00957052 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		729891481A9F7C24008E6A70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		729891521A9F7C24008E6A70 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,13 +321,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		729891451A9F7C24008E6A70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		729891501A9F7C24008E6A70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				729891631A9F7C71008E6A70 /* AlamofireRACExtensionsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		7233CA521A9EB38F00957052 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7233CA431A9EB38F00957052 /* AlamofireRACExtensions */;
+			target = 7233CA431A9EB38F00957052 /* AlamofireRACExtensions-Mac */;
 			targetProxy = 7233CA511A9EB38F00957052 /* PBXContainerItemProxy */;
+		};
+		729891571A9F7C24008E6A70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 729891491A9F7C24008E6A70 /* AlamofireRACExtensions-iOS */;
+			targetProxy = 729891561A9F7C24008E6A70 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -327,7 +448,7 @@
 				INFOPLIST_FILE = AlamofireRACExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AlamofireRACExtensions;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -344,7 +465,7 @@
 				INFOPLIST_FILE = AlamofireRACExtensions/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AlamofireRACExtensions;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -356,6 +477,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -374,10 +496,91 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AlamofireRACExtensionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7298915E1A9F7C24008E6A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AlamofireRACExtensions/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = AlamofireRACExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7298915F1A9F7C24008E6A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = AlamofireRACExtensions/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = AlamofireRACExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		729891611A9F7C24008E6A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AlamofireRACExtensionsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		729891621A9F7C24008E6A70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AlamofireRACExtensionsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -393,19 +596,37 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7233CA5A1A9EB38F00957052 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensions" */ = {
+		7233CA5A1A9EB38F00957052 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensions-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7233CA5B1A9EB38F00957052 /* Debug */,
 				7233CA5C1A9EB38F00957052 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		7233CA5D1A9EB38F00957052 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensionsTests" */ = {
+		7233CA5D1A9EB38F00957052 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensionsTests-Mac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7233CA5E1A9EB38F00957052 /* Debug */,
 				7233CA5F1A9EB38F00957052 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7298915D1A9F7C24008E6A70 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensions-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7298915E1A9F7C24008E6A70 /* Debug */,
+				7298915F1A9F7C24008E6A70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		729891601A9F7C24008E6A70 /* Build configuration list for PBXNativeTarget "AlamofireRACExtensions-iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				729891611A9F7C24008E6A70 /* Debug */,
+				729891621A9F7C24008E6A70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
