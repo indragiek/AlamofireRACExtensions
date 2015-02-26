@@ -49,7 +49,7 @@
 		7233CA551A9EB38F00957052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7233CA561A9EB38F00957052 /* AlamofireRACExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireRACExtensionsTests.swift; sourceTree = "<group>"; };
 		7298914A1A9F7C24008E6A70 /* AlamofireRACExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireRACExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		729891541A9F7C24008E6A70 /* AlamofireRACExtensions-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AlamofireRACExtensions-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		729891541A9F7C24008E6A70 /* AlamofireRACExtensionsTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AlamofireRACExtensionsTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		729891641A9F7CAA008E6A70 /* AlamofireRACExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireRACExtensions.swift; sourceTree = "<group>"; };
 		7298916A1A9F7DA9008E6A70 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		7298916B1A9F7DA9008E6A70 /* LlamaKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LlamaKit.framework; path = Carthage/Build/iOS/LlamaKit.framework; sourceTree = SOURCE_ROOT; };
@@ -118,7 +118,7 @@
 				7233CA441A9EB38F00957052 /* AlamofireRACExtensions.framework */,
 				7233CA4F1A9EB38F00957052 /* AlamofireRACExtensionsTests-Mac.xctest */,
 				7298914A1A9F7C24008E6A70 /* AlamofireRACExtensions.framework */,
-				729891541A9F7C24008E6A70 /* AlamofireRACExtensions-iOSTests.xctest */,
+				729891541A9F7C24008E6A70 /* AlamofireRACExtensionsTests-iOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 			);
 			name = "AlamofireRACExtensionsTests-iOS";
 			productName = "AlamofireRACExtensions-iOSTests";
-			productReference = 729891541A9F7C24008E6A70 /* AlamofireRACExtensions-iOSTests.xctest */;
+			productReference = 729891541A9F7C24008E6A70 /* AlamofireRACExtensionsTests-iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */

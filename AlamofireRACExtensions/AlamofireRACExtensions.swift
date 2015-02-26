@@ -10,7 +10,7 @@ import Alamofire
 import ReactiveCocoa
 import LlamaKit
 
-struct URLRequest: URLRequestConvertible {
+public struct URLRequest {
     let method: Alamofire.Method
     let URL: URLStringConvertible
     let parameters: [String: AnyObject]?
@@ -18,15 +18,15 @@ struct URLRequest: URLRequestConvertible {
 }
 
 extension URLRequest: URLRequestConvertible {
-    var URLRequest: NSURLRequest {
+    public var URLRequest: NSURLRequest {
         let mutableURLRequest = NSMutableURLRequest(URL: NSURL(string: URL.URLString)!)
         mutableURLRequest.HTTPMethod = method.rawValue
         return encoding.encode(mutableURLRequest, parameters: parameters).0
     }
 }
 
-extension Alamofire.Manager {
-    func rac_request(request: URLRequestConvertible, serializer: Alamofire.Request.Serializer) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError> {
+public extension Manager {
+    public func rac_request(request: URLRequestConvertible, serializer: Request.Serializer) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError> {
         return SignalProducer { observer, disposable in
             let request = self.request(request)
                 .validate()
@@ -50,7 +50,7 @@ extension Alamofire.Manager {
         }
     }
     
-    func rac_dataWithRequest(request: URLRequestConvertible) -> SignalProducer<(NSData, NSHTTPURLResponse), NSError> {
+    public func rac_dataWithRequest(request: URLRequestConvertible) -> SignalProducer<(NSData, NSHTTPURLResponse), NSError> {
         return rac_request(request, serializer: Alamofire.Request.responseDataSerializer()).lift(map { (object, response) in
             if let data = object as? NSData {
                 return (data, response)
@@ -60,11 +60,11 @@ extension Alamofire.Manager {
         })
     }
     
-    func rac_JSONWithRequest(request: URLRequestConvertible, options: NSJSONReadingOptions = .allZeros) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError> {
+    public func rac_JSONWithRequest(request: URLRequestConvertible, options: NSJSONReadingOptions = .allZeros) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError> {
         return rac_request(request, serializer: Alamofire.Request.JSONResponseSerializer(options: options))
     }
     
-    func rac_propertyListWithRequest(request: URLRequestConvertible, options: NSPropertyListReadOptions = .allZeros) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError> {
+    public func rac_propertyListWithRequest(request: URLRequestConvertible, options: NSPropertyListReadOptions = .allZeros) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError> {
         return rac_request(request, serializer: Alamofire.Request.propertyListResponseSerializer(options: options))
     }
 }

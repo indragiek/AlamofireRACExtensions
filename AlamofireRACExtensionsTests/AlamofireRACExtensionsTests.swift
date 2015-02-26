@@ -8,29 +8,35 @@
 
 import Foundation
 import XCTest
+import OHHTTPStubs
+import Alamofire
+import ReactiveCocoa
+import AlamofireRACExtensions
+
+private let JSONString = "{\"key\": \"value\"}"
+private let JSONData = JSONString.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)
+
+private func stubbedManager() -> Manager {
+    let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
+    OHHTTPStubs.setEnabled(true, forSessionConfiguration: configuration)
+    return Manager(configuration: configuration)
+}
 
 class AlamofireRACExtensionsTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        OHHTTPStubs.removeAllStubs()
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
+    func testSendsErrorOnValidationFailure() {
+        let request = NSURLRequest(URL: NSURL(string: "http://test.com")!)
+        OHHTTPStubs.stubRequestsPassingTest({ $0 == request }) { _ in
+            OHHTTPStubsResponse(data: nil, statusCode: 403, headers: nil)
         }
+        let expectation = expectationWithDescription("Request should error")
+        stubbedManager().rac_request(request, serializer: Alamofire.Request.responseDataSerializer()).start(error: { error in
+            XCTAssertNotNil(error, "There should be an error")
+            expectation.fulfill()
+        })
     }
-    
 }
