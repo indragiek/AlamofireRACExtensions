@@ -1,0 +1,2 @@
+github "ReactiveCocoa/ReactiveCocoa" "swift-development"
+github "Alamofire/Alamofire" >= 1.1
