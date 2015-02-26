@@ -22,6 +22,17 @@
 		729891751A9F7DB2008E6A70 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729891721A9F7DB2008E6A70 /* ReactiveCocoa.framework */; };
 		7298917F1A9F7ED3008E6A70 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7298917E1A9F7ED3008E6A70 /* OHHTTPStubs.framework */; };
 		729891821A9F7F1B008E6A70 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729891801A9F7EFD008E6A70 /* OHHTTPStubs.framework */; };
+		72FBB0351A9F93C1003379B5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7298916A1A9F7DA9008E6A70 /* Alamofire.framework */; };
+		72FBB0361A9F93C4003379B5 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7298916B1A9F7DA9008E6A70 /* LlamaKit.framework */; };
+		72FBB0371A9F93C7003379B5 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7298916C1A9F7DA9008E6A70 /* ReactiveCocoa.framework */; };
+		72FBB0381A9F93E9003379B5 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7298916A1A9F7DA9008E6A70 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72FBB0391A9F93E9003379B5 /* LlamaKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7298916B1A9F7DA9008E6A70 /* LlamaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72FBB03A1A9F93E9003379B5 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7298916C1A9F7DA9008E6A70 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72FBB03B1A9F93E9003379B5 /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7298917E1A9F7ED3008E6A70 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72FBB03F1A9F9D5A003379B5 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 72FBB03D1A9F9D5A003379B5 /* test.json */; };
+		72FBB0401A9F9D5A003379B5 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 72FBB03D1A9F9D5A003379B5 /* test.json */; };
+		72FBB0411A9F9D5A003379B5 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72FBB03E1A9F9D5A003379B5 /* test.plist */; };
+		72FBB0421A9F9D5A003379B5 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72FBB03E1A9F9D5A003379B5 /* test.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +52,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		72FBB02F1A9F9287003379B5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				72FBB0381A9F93E9003379B5 /* Alamofire.framework in CopyFiles */,
+				72FBB0391A9F93E9003379B5 /* LlamaKit.framework in CopyFiles */,
+				72FBB03A1A9F93E9003379B5 /* ReactiveCocoa.framework in CopyFiles */,
+				72FBB03B1A9F93E9003379B5 /* OHHTTPStubs.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7233CA441A9EB38F00957052 /* AlamofireRACExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlamofireRACExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7233CA481A9EB38F00957052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +86,8 @@
 		729891721A9F7DB2008E6A70 /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/Mac/ReactiveCocoa.framework; sourceTree = SOURCE_ROOT; };
 		7298917E1A9F7ED3008E6A70 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = SOURCE_ROOT; };
 		729891801A9F7EFD008E6A70 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/Mac/OHHTTPStubs.framework; sourceTree = SOURCE_ROOT; };
+		72FBB03D1A9F9D5A003379B5 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		72FBB03E1A9F9D5A003379B5 /* test.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = test.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +125,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				729891551A9F7C24008E6A70 /* AlamofireRACExtensions.framework in Frameworks */,
+				72FBB0361A9F93C4003379B5 /* LlamaKit.framework in Frameworks */,
+				72FBB0351A9F93C1003379B5 /* Alamofire.framework in Frameworks */,
 				7298917F1A9F7ED3008E6A70 /* OHHTTPStubs.framework in Frameworks */,
+				72FBB0371A9F93C7003379B5 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				7233CA561A9EB38F00957052 /* AlamofireRACExtensionsTests.swift */,
+				72FBB03C1A9F9D5A003379B5 /* Resources */,
 				729891421A9F7A05008E6A70 /* Frameworks */,
 				7233CA541A9EB38F00957052 /* Supporting Files */,
 			);
@@ -212,6 +245,15 @@
 				729891801A9F7EFD008E6A70 /* OHHTTPStubs.framework */,
 			);
 			name = Mac;
+			sourceTree = "<group>";
+		};
+		72FBB03C1A9F9D5A003379B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				72FBB03D1A9F9D5A003379B5 /* test.json */,
+				72FBB03E1A9F9D5A003379B5 /* test.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +338,7 @@
 				729891501A9F7C24008E6A70 /* Sources */,
 				729891511A9F7C24008E6A70 /* Frameworks */,
 				729891521A9F7C24008E6A70 /* Resources */,
+				72FBB02F1A9F9287003379B5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -362,6 +405,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72FBB0411A9F9D5A003379B5 /* test.plist in Resources */,
+				72FBB03F1A9F9D5A003379B5 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +421,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72FBB0421A9F9D5A003379B5 /* test.plist in Resources */,
+				72FBB0401A9F9D5A003379B5 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

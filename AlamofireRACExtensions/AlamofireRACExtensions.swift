@@ -30,12 +30,13 @@ public extension Manager {
         return SignalProducer { observer, disposable in
             let request = self.request(request)
                 .validate()
-                .response { (request, response, responseObject, error) in
+                .response(serializer) { (request, response, responseObject, error) in
                     if let error = error {
                         sendError(observer, error)
                     } else if let response = response {
                         if let responseObject: AnyObject = responseObject {
                             sendNext(observer, (responseObject, response))
+                            sendCompleted(observer)
                         } else {
                             fatalError("Received no response object for successful response \(response) from request \(request)")
                         }
