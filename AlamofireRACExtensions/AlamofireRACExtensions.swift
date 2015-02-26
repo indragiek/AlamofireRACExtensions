@@ -10,21 +10,6 @@ import Alamofire
 import ReactiveCocoa
 import LlamaKit
 
-public struct URLRequest {
-    let method: Alamofire.Method
-    let URL: URLStringConvertible
-    let parameters: [String: AnyObject]?
-    let encoding: ParameterEncoding = .URL
-}
-
-extension URLRequest: URLRequestConvertible {
-    public var URLRequest: NSURLRequest {
-        let mutableURLRequest = NSMutableURLRequest(URL: NSURL(string: URL.URLString)!)
-        mutableURLRequest.HTTPMethod = method.rawValue
-        return encoding.encode(mutableURLRequest, parameters: parameters).0
-    }
-}
-
 public extension Manager {
     public func rac_request(request: URLRequestConvertible, serializer: Request.Serializer) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError> {
         return SignalProducer { observer, disposable in
