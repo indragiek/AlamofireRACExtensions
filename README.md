@@ -23,7 +23,7 @@ Add `AlamofireRACExtensions.swift` to your project.
 
 The main method is `Alamofire.Manager.rac_request(request:serializer:)`:
 
-```
+```swift
 public func rac_request(request: URLRequestConvertible, serializer: Request.Serializer) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError>
 ```
 
@@ -34,7 +34,7 @@ There are convenience methods built on this one for getting responses as data, J
 
 ### Example
 
-```
+```swift
 let manager = Manager(configuration: NSURLSessionConfiguration.defaultConfiguration())
 let request = NSURLRequest(URL: NSURL(string: "http://httpbin.org/get")!)
 manager.rac_JSONWithRequest(request)
