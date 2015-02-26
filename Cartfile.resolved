@@ -1,4 +1,4 @@
 github "Alamofire/Alamofire" "1.1.4"
 github "LlamaKit/LlamaKit" "v0.5.0"
-github "indragiek/OHHTTPStubs" "f970e109897c40c4a6dee0c767b515797a0200dc"
+github "indragiek/OHHTTPStubs" "15a7178086eea81cf737938a03f2c94d355f4d7a"
 github "ReactiveCocoa/ReactiveCocoa" "555c6e84cb128b91956d40bba9f964fcff67e516"

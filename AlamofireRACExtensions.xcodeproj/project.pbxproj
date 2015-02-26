@@ -33,6 +33,13 @@
 		72FBB0401A9F9D5A003379B5 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 72FBB03D1A9F9D5A003379B5 /* test.json */; };
 		72FBB0411A9F9D5A003379B5 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72FBB03E1A9F9D5A003379B5 /* test.plist */; };
 		72FBB0421A9F9D5A003379B5 /* test.plist in Resources */ = {isa = PBXBuildFile; fileRef = 72FBB03E1A9F9D5A003379B5 /* test.plist */; };
+		72FBB0451A9FA549003379B5 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729891701A9F7DB2008E6A70 /* Alamofire.framework */; };
+		72FBB0461A9FA54C003379B5 /* LlamaKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729891711A9F7DB2008E6A70 /* LlamaKit.framework */; };
+		72FBB0471A9FA54D003379B5 /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 729891721A9F7DB2008E6A70 /* ReactiveCocoa.framework */; };
+		72FBB0491A9FA56A003379B5 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 729891701A9F7DB2008E6A70 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72FBB04A1A9FA56A003379B5 /* LlamaKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 729891711A9F7DB2008E6A70 /* LlamaKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72FBB04B1A9FA56A003379B5 /* ReactiveCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 729891721A9F7DB2008E6A70 /* ReactiveCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		72FBB04C1A9FA56A003379B5 /* OHHTTPStubs.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 729891801A9F7EFD008E6A70 /* OHHTTPStubs.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +70,19 @@
 				72FBB0391A9F93E9003379B5 /* LlamaKit.framework in CopyFiles */,
 				72FBB03A1A9F93E9003379B5 /* ReactiveCocoa.framework in CopyFiles */,
 				72FBB03B1A9F93E9003379B5 /* OHHTTPStubs.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72FBB0481A9FA55F003379B5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				72FBB0491A9FA56A003379B5 /* Alamofire.framework in CopyFiles */,
+				72FBB04A1A9FA56A003379B5 /* LlamaKit.framework in CopyFiles */,
+				72FBB04B1A9FA56A003379B5 /* ReactiveCocoa.framework in CopyFiles */,
+				72FBB04C1A9FA56A003379B5 /* OHHTTPStubs.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +126,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7233CA501A9EB38F00957052 /* AlamofireRACExtensions.framework in Frameworks */,
+				72FBB0461A9FA54C003379B5 /* LlamaKit.framework in Frameworks */,
+				72FBB0451A9FA549003379B5 /* Alamofire.framework in Frameworks */,
 				729891821A9F7F1B008E6A70 /* OHHTTPStubs.framework in Frameworks */,
+				72FBB0471A9FA54D003379B5 /* ReactiveCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +325,7 @@
 				7233CA4B1A9EB38F00957052 /* Sources */,
 				7233CA4C1A9EB38F00957052 /* Frameworks */,
 				7233CA4D1A9EB38F00957052 /* Resources */,
+				72FBB0481A9FA55F003379B5 /* CopyFiles */,
 			);
 			buildRules = (
 			);
