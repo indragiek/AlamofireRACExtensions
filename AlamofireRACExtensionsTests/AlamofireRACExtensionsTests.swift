@@ -87,7 +87,7 @@ class AlamofireRACExtensionsTests: XCTestCase {
             OHHTTPStubsResponse(fileAtPath: Dummy.JSONPath, statusCode: 200, headers: ["Content-Type": "application/json"])
         }
         let expectation = expectationWithDescription("Response object should be a JSON dictionary")
-        stubbedManager().rac_JSONWithRequest(Dummy.JSONRequest, options: .allZeros)
+        stubbedManager().rac_JSONWithRequest(Dummy.JSONRequest)
             .start(next: { (object, response) in
                 XCTAssertEqual(response.statusCode, 200)
                 if let dictionary = object as? [String: AnyObject] {
@@ -108,7 +108,7 @@ class AlamofireRACExtensionsTests: XCTestCase {
             OHHTTPStubsResponse(fileAtPath: Dummy.PropertyListPath, statusCode: 200, headers: ["Content-Type": "application/xml"])
         }
         let expectation = expectationWithDescription("Response object should be a property list dictionary")
-        stubbedManager().rac_propertyListWithRequest(Dummy.PropertyListRequest, options: .allZeros)
+        stubbedManager().rac_propertyListWithRequest(Dummy.PropertyListRequest)
             .start(next: { (object, response) in
                 XCTAssertEqual(response.statusCode, 200)
                 if let dictionary = object as? [String: AnyObject] {
