@@ -37,13 +37,14 @@ public extension Manager {
     }
     
     public func rac_dataWithRequest(request: URLRequestConvertible) -> SignalProducer<(NSData, NSHTTPURLResponse), NSError> {
-        return rac_request(request, serializer: Request.responseDataSerializer()).lift(map { (object, response) in
-            if let data = object as? NSData {
-                return (data, response)
-            } else {
-                fatalError("Response object \(object) is not of type NSData")
+        return rac_request(request, serializer: Request.responseDataSerializer())
+            |> map { (object, response) in
+                if let data = object as? NSData {
+                    return (data, response)
+                } else {
+                    fatalError("Response object \(object) is not of type NSData")
+                }
             }
-        })
     }
     
     public func rac_JSONWithRequest(request: URLRequestConvertible, options: NSJSONReadingOptions = .allZeros) -> SignalProducer<(AnyObject, NSHTTPURLResponse), NSError> {
