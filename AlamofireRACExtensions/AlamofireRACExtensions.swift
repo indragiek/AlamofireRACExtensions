@@ -23,7 +23,8 @@ public extension Manager {
                             sendNext(observer, (responseObject, response))
                             sendCompleted(observer)
                         } else {
-                            fatalError("Received no response object for successful response \(response) from request \(request)")
+                            assertionFailure("Received no response object for successful response \(response) from request \(request)")
+                            sendCompleted(observer)
                         }
                     } else {
                         fatalError("Invalid response -- no HTTP response or error")
