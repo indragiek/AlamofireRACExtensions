@@ -20,13 +20,14 @@ private struct Dummy {
     static let PropertyListPath = NSBundle(forClass: AlamofireRACExtensionsTests.self).pathForResource("test", ofType: "plist")!
 }
 
-private func stubbedManager() -> Manager {
-    let configuration = NSURLSessionConfiguration.defaultSessionConfiguration()
-    OHHTTPStubs.setEnabled(true, forSessionConfiguration: configuration)
-    return Manager(configuration: configuration)
-}
-
 class AlamofireRACExtensionsTests: XCTestCase {
+    var manager: Manager!
+    
+    override func setUp() {
+        super.setUp()
+        manager = Manager(configuration: .defaultSessionConfiguration())
+    }
+    
     override func tearDown() {
         OHHTTPStubs.removeAllStubs()
         super.tearDown()
@@ -37,7 +38,7 @@ class AlamofireRACExtensionsTests: XCTestCase {
             OHHTTPStubsResponse(data: nil, statusCode: 403, headers: nil)
         }
         let expectation = expectationWithDescription("Request should error")
-        stubbedManager().rac_request(Dummy.JSONRequest, serializer: Alamofire.Request.responseDataSerializer())
+        manager.rac_request(Dummy.JSONRequest, serializer: Alamofire.Request.responseDataSerializer())
             .start(error: { error in
                 XCTAssertNotNil(error)
                 expectation.fulfill()
@@ -50,11 +51,11 @@ class AlamofireRACExtensionsTests: XCTestCase {
             OHHTTPStubsResponse(fileAtPath: Dummy.JSONPath, statusCode: 200, headers: ["Content-Type": "application/json"])
         }
         let expectation = expectationWithDescription("Response should be serialized using a custom serializer")
-        stubbedManager().rac_request(Dummy.JSONRequest) { (_, _, data) in
+        manager.rac_request(Dummy.JSONRequest) { (_, _, data) in
             XCTAssertNotNil(data)
             return (NSString(data: data!, encoding: NSUTF8StringEncoding), nil)
         }
-        .start(next: { (string, response) in
+        |> start(next: { (string, response) in
             XCTAssertEqual(response.statusCode, 200)
             XCTAssertEqual(string as String, String(contentsOfFile: Dummy.JSONPath, encoding: NSUTF8StringEncoding, error: nil)!)
         }, error: { error in
@@ -70,8 +71,8 @@ class AlamofireRACExtensionsTests: XCTestCase {
             OHHTTPStubsResponse(fileAtPath: Dummy.JSONPath, statusCode: 200, headers: ["Content-Type": "application/json"])
         }
         let expectation = expectationWithDescription("Response object should be data")
-        stubbedManager().rac_dataWithRequest(Dummy.JSONRequest)
-            .start(next: { (data, response) in
+        manager.rac_dataWithRequest(Dummy.JSONRequest)
+            |> start(next: { (data, response) in
                 XCTAssertEqual(response.statusCode, 200)
                 XCTAssertEqual(data, NSData(contentsOfFile: Dummy.JSONPath)!)
             }, error: { error in
@@ -87,8 +88,8 @@ class AlamofireRACExtensionsTests: XCTestCase {
             OHHTTPStubsResponse(fileAtPath: Dummy.JSONPath, statusCode: 200, headers: ["Content-Type": "application/json"])
         }
         let expectation = expectationWithDescription("Response object should be a JSON dictionary")
-        stubbedManager().rac_JSONWithRequest(Dummy.JSONRequest)
-            .start(next: { (object, response) in
+        manager.rac_JSONWithRequest(Dummy.JSONRequest)
+            |> start(next: { (object, response) in
                 XCTAssertEqual(response.statusCode, 200)
                 if let dictionary = object as? [String: AnyObject] {
                     XCTAssertEqual(dictionary["key"] as String, "value")
@@ -108,8 +109,8 @@ class AlamofireRACExtensionsTests: XCTestCase {
             OHHTTPStubsResponse(fileAtPath: Dummy.PropertyListPath, statusCode: 200, headers: ["Content-Type": "application/xml"])
         }
         let expectation = expectationWithDescription("Response object should be a property list dictionary")
-        stubbedManager().rac_propertyListWithRequest(Dummy.PropertyListRequest)
-            .start(next: { (object, response) in
+        manager.rac_propertyListWithRequest(Dummy.PropertyListRequest)
+            |> start(next: { (object, response) in
                 XCTAssertEqual(response.statusCode, 200)
                 if let dictionary = object as? [String: AnyObject] {
                     XCTAssertEqual(dictionary["key"] as String, "value")
